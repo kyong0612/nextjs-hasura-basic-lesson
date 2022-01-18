@@ -78,18 +78,17 @@ https://tailwindcss.com/docs/guides/nextjs
     yarn add tailwindcss@latest postcss@latest autoprefixer@latest
 ### 3-2. tailwind.config.js, postcss.config.jsの生成
     npx tailwindcss init -p
-### 3-3. tailwind.config.jsのpurge設定追加
+### 3-3. tailwind.config.jsのcontent設定追加
 ~~~
 module.exports = {
-    purge: ['./pages/**/*.tsx', './components/**/*.tsx'],
-    darkMode: false,
-    theme: {
-        extend: {},
-    },
-    variants: {
-        extend: {},
-    },
-    plugins: [],
+   content: [
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
 }
 ~~~
 ### 3-4. globals.cssの編集
