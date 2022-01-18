@@ -129,3 +129,16 @@ Time:        1.728 s, estimated 2 s
 ### 5-2.  add queries in queries/queries.ts file
 ### 5-3.  generate types automatically
     yarn gen-types
+
+### 6. 環境変数
+#### 6-1 set hasura admin secret
+https://hasura.io/docs/latest/graphql/cloud/projects/secure.html#updating-the-admin-secret
+
+#### 6-2 create env file for dev and test in local
+```
+cp example.env .env.local
+cp example.env .env.test.local
+``` 
+
+#### 6-3 fill config
+endpointとHASURA_GRAPHQL_ADMIN_SECRETの値を入力する
